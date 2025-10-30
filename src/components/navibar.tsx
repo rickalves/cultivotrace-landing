@@ -7,6 +7,13 @@ import { fadeIn } from "./anim"
 import { useState } from "react"
 import Image from "next/image"
 
+const sections = [
+  { label: "Funcionalidades", href: "#features" },
+  { label: "Planos", href: "#plans" },
+  { label: "Sobre", href: "#about" },
+  { label: "Contato", href: "#contact" },
+]
+
 export function Navbar() {
   const [open, setOpen] = useState(false)
 
@@ -68,20 +75,20 @@ export function Navbar() {
               }
             }}
           >
-            {["Funcionalidades", "Planos", "Sobre", "Contato"].map((label) => (
+            {sections.map((section) => (
               <motion.div
-                key={label}
+                key={section.label}
                 variants={{
                   open: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
                   closed: { opacity: 0, x: -20 }
                 }}
               >
                 <Link
-                  href={`#${label.toLowerCase()}`}
+                  href={`${section.href}`}
                   className="py-2 block hover:text-brand-800 hover:bg-brand-50 px-2 rounded transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  {label}
+                  {section.label}
                 </Link>
               </motion.div>
             ))}

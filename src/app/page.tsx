@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero";
 import { ProblemSolution } from "@/components/problema-solution";
 import { Features } from "@/components/features";
 import { StepsFlow } from "@/components/steps-flow";
+import { Pricing } from "@/components/pricing";
 
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
         <ProblemSolution />
         <Features />
         <StepsFlow />
-        {/* <Pricing /> */}
+        <Pricing />
         {/* <About /> */}
         {/* <Contact /> */}
       </main>

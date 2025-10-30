@@ -19,7 +19,7 @@ export function ProblemSolution() {
   ]
 
   return (
-    <section className="py-8 px-4 md:py-16 lg:py-20">
+    <section id="problem-solution" className="py-8 px-4 md:py-16 lg:py-20">
       <div className="grid gap-4 md:grid-cols-2 md:gap-6">
         <motion.div
           initial={{ opacity: 0, x: -50, rotateY: -15 }}
