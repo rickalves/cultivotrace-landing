@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
 import { motion } from "motion/react"
 import { fadeUp } from "./anim"
-import { desc } from "motion/react-client"
 
 const plans = [
   {

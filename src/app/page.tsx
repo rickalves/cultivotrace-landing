@@ -5,7 +5,7 @@ import { Features } from "@/components/features";
 import { StepsFlow } from "@/components/steps-flow";
 import { Pricing } from "@/components/pricing";
 import { About } from "@/components/about";
-// import { Contact } from "@/components/contact";
+import { Contact } from "@/components/contact";
 // import { Footer } from "@/components/footer";
 
 
@@ -20,7 +20,7 @@ export default function Home() {
         <StepsFlow />
         <Pricing />
         <About />
-        {/* <Contact /> */}
+        <Contact />
       </main>
       {/* <Footer /> */}
     </>
