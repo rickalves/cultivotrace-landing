@@ -8,7 +8,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "CultivoTrace",
+  title: "CultivoTrace - Rastreabilidade e gestão agrícola inteligente",
   description: "Plataforma de monitoramento agrícola para otimização de recursos e aumento da produtividade.",
 };
 

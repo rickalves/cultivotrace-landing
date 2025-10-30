@@ -1,5 +1,8 @@
 import { Navbar } from "@/components/navibar";
 import { Hero } from "@/components/hero";
+import { ProblemSolution } from "@/components/problema-solution";
+import { Features } from "@/components/features";
+
 
 export default function Home() {
   return (
@@ -7,8 +10,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        {/* <ProblemSolution /> */}
-        {/* <Features /> */}
+        <ProblemSolution />
+        <Features />
         {/* <StepsFlow /> */}
         {/* <Pricing /> */}
         {/* <About /> */}
