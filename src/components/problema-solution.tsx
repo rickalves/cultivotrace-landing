@@ -19,17 +19,7 @@ export function ProblemSolution() {
   ]
 
   return (
-    <section className="py-12 px-4 md:py-16 lg:py-20">
-      <motion.h2 
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.6 }}
-        className="text-center text-xl md:text-2xl lg:text-3xl font-semibold mb-6 md:mb-8"
-      >
-        Desafios do Campo & Nossa Solução
-      </motion.h2>
-
+    <section className="py-8 px-4 md:py-16 lg:py-20">
       <div className="grid gap-4 md:grid-cols-2 md:gap-6">
         <motion.div
           initial={{ opacity: 0, x: -50, rotateY: -15 }}

@@ -14,7 +14,7 @@ const items = [
 
 export function Features() {
   return (
-    <section id="features" className="py-8 px-4 md:px-8 lg:px-30">
+    <section id="features" className="py-2 px-4 md:px-8 lg:px-30">
       <div className="text-center mb-10">
         <h2 className="text-2xl text-primary md:text-3xl font-semibold">Funcionalidades Principais</h2>
         <p className="text-md md:font-medium font-medium mt-3">Ferramentas que conectam o campo à tecnologia</p>
