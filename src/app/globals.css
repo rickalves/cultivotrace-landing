@@ -202,3 +202,12 @@ body {
 .container-ct {
   @apply max-w-7xl mx-auto px-6;
 }
+
+/* Smooth scrolling and anchor offset
+   - Enables smooth behavior for hash links
+   - Adds a default scroll offset so fixed headers don't cover targets
+   Adjust --scroll-offset if your header is taller/shorter. 
+*/
+html { scroll-behavior: smooth; }
+:root { --scroll-offset: 4rem; }
+[id] { scroll-margin-top: var(--scroll-offset); }

@@ -19,18 +19,18 @@ export function Navbar() {
 
   return (
     <motion.header {...fadeIn} className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-      <div className="h-14 md:h-16 flex items-center justify-between px-4">
+      <div className="h-16 md:h-16 flex items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 font-semibold">
-          <Image src="/cultivotrace-logo.svg" alt="Cultivo Trace Logo" width={144} height={48} />
+          <Image src="/logo.svg" alt="Cultivo Trace Logo" width={192} height={48} />
         </Link>
 
         {/* mobile menu button */}
         <button
-          className="md:hidden p-2 rounded-md hover:bg-zinc-100"
+          className="md:hidden p-2 rounded-md hover:bg-zinc-100 "
           onClick={() => setOpen((s) => !s)}
           aria-label="Abrir menu"
         >
-          <Menu />
+          <Menu className="text-primary" />
         </button>
 
         {/* nav desktop */}

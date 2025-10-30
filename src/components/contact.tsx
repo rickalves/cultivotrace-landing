@@ -18,8 +18,8 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-8 px-8 md:py-16 lg:py-20">
-      <motion.h2 {...fadeUp(0)} className="text-2xl md:text-2xl lg:text-3xl font-semibold text-center">
+    <section id="contact" className="py-4 px-8 md:py-16 lg:py-20">
+      <motion.h2 {...fadeUp(0)} className="text-2xl md:text-2xl lg:text-3xl font-semibold text-center text-primary">
         Entre em Contato
       </motion.h2>
       <motion.p {...fadeUp(0.15)} className="text-center text-zinc-700 mt-2">
@@ -41,7 +41,7 @@ export function Contact() {
           {sent && <p className="text-sm text-green-700">Mensagem enviada! Em breve entraremos em contato.</p>}
         </motion.form>
 
-        <motion.div {...fadeUp(0.45)} className="space-y-4 text-md">
+        <motion.div {...fadeUp(0.45)} className="space-y-4 text-md mt-2">
           <div className="text-2xl font-medium text-primary">Fale Conosco</div>
           <div className="flex items-center gap-2"><Mail className="text-primary" /><span>contato@cultivotrace.com.br</span></div>
           <div className="flex items-center gap-2"><Phone className="text-primary" /><span>(88) 9 9999-9999</span></div>
