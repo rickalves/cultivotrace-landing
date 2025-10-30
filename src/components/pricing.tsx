@@ -5,10 +5,12 @@ import { Badge } from "@/components/ui/badge"
 import { Check } from "lucide-react"
 import { motion } from "motion/react"
 import { fadeUp } from "./anim"
+import { desc } from "motion/react-client"
 
 const plans = [
   {
     name: "Grátis",
+    desc: "Ideal para pequenos produtores começarem a rastrear seus cultivos.",
     price: "R$ 0",
     period: "/mês",
     features: ["Até 2 cultivos", "Até 10 lotes/mês", "Rastreabilidade básica", "QR Code público", "Suporte por email"],
@@ -18,6 +20,7 @@ const plans = [
   },
   {
     name: "Pro",
+    desc: "Ideal para empresas que buscam escalabilidade e recursos avançados.",
     price: "R$ 49",
     period: "/mês",
     features: ["Rastreabilidade ilimitada", "Relatórios inteligentes", "QR Code personalizado", "Dashboard completo", "Exportação de dados"],
@@ -27,6 +30,7 @@ const plans = [
   },
   {
     name: "Empresarial",
+    desc: "Ideal para empresas que precisam de soluções personalizadas.",
     price: "Sob consulta",
     period: "",
     features: ["Tudo do Pro", "Integrações/API", "Suporte premium dedicado", "Treinamento e equipe", "SLA garantido"],
@@ -50,8 +54,9 @@ export function Pricing() {
           <motion.div key={p.name} {...fadeUp(p.i)}>
             <Card className={`relative shadow-soft ${p.highlight ? "ring-2 ring-primary" : ""} hover:-translate-y-0.5 hover:shadow-md transition`}>
               <CardContent className="p-4 md:p-6">
-                <div className="flex flex-col-reverse items-center justify-between">
+                <div className="flex flex-col items-center justify-between">
                   <div className="text-2xl font-semibold">{p.name}</div>
+                  <p className="text-center text-md">{p.desc}</p>
                   {p.highlight && <Badge className="absolute -top-4 py-2 px-4 bg-accent text-primary font-semibold">Mais Popular</Badge>}
                 </div>
 
