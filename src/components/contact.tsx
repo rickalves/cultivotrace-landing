@@ -27,11 +27,11 @@ export function Contact() {
       </motion.p>
 
       {/* mobile: formulário em cima e infos abaixo; md+: lado a lado */}
-      <div className="mt-6 grid gap-6 md:grid-cols-3 md:gap-8">
+      <div className="mt-6 grid gap-6 md:grid-cols-2 md:gap-0">
         <motion.form
           {...fadeUp(0.3)}
           onSubmit={onSubmit}
-          className="md:col-span-2 grid gap-3 md:gap-4"
+          className="grid gap-3 md:gap-4 md:col-span-1 md:order-2"
         >
           <Input type="text" placeholder="Seu nome" required />
           <Input type="email" placeholder="Seu e-mail" required />
@@ -41,7 +41,7 @@ export function Contact() {
           {sent && <p className="text-sm text-green-700">Mensagem enviada! Em breve entraremos em contato.</p>}
         </motion.form>
 
-        <motion.div {...fadeUp(0.45)} className="space-y-4 text-md mt-2">
+        <motion.div {...fadeUp(0.45)} className="space-y-4 md:space-y-6 text-md mt-2">
           <div className="text-2xl font-medium text-primary">Fale Conosco</div>
           <div className="flex items-center gap-2"><Mail className="text-primary" /><span>contato@cultivotrace.com.br</span></div>
           <div className="flex items-center gap-2"><Phone className="text-primary" /><span>(88) 9 9999-9999</span></div>

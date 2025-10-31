@@ -19,8 +19,8 @@ export function ProblemSolution() {
   ]
 
   return (
-    <section id="problem-solution" className="py-8 px-4 md:py-16 lg:py-20">
-      <div className="grid gap-4 md:grid-cols-2 md:gap-6">
+    <section id="problem-solution" className="py-8 px-4 md:py-8 md:px-8 lg:py-20 lg:px-30">
+      <div className="grid gap-4 md:grid-cols-2  md:gap-4 lg:gap-10">
         <motion.div
           initial={{ opacity: 0, x: -50, rotateY: -15 }}
           whileInView={{ opacity: 1, x: 0, rotateY: 0 }}

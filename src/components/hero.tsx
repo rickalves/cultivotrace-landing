@@ -6,10 +6,10 @@ import { fadeUp } from "./anim"
 
 export function Hero() {
   return (
-    <section className="relative h-[400px] md:h-[400px] lg:h-[500px] bg-[url('/hero.jpg')] bg-cover bg-position-[30%] bg-no-repeat overflow-hidden">
+    <section className="relative h-[400px] md:h-[600px] lg:h-[600px] bg-[url('/hero.jpg')] bg-cover bg-position-[30%] bg-no-repeat overflow-hidden">
       <div className="absolute inset-0 bg-black/20" />
-      <div className="py-8 px-4 h-full text-white flex flex-col items-center text-center relative z-10">
-        <motion.div {...fadeUp(0)} className="text-3xl md:text-5xl font-semibold leading-tight max-w-3xl">
+      <div className="py-8 px-4 h-full text-white flex flex-col items-center justify-center text-center relative z-10 md:px-8">
+        <motion.div {...fadeUp(0)} className="text-3xl font-semibold leading-tight max-w-5xl md:text-5xl lg:text-6xl">
           Rastreie, gerencie e valorize sua produção agrícola.
         </motion.div>
 

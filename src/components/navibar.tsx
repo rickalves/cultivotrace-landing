@@ -19,7 +19,7 @@ export function Navbar() {
 
   return (
     <motion.header {...fadeIn} className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-      <div className="h-16 md:h-16 flex items-center justify-between px-4">
+      <div className="h-16 flex items-center justify-between px-4 md:h-20 md:px-8 ">
         <Link href="/" className="flex items-center gap-2 font-semibold">
           <Image src="/logo.svg" alt="Cultivo Trace Logo" width={192} height={48} />
         </Link>
@@ -34,16 +34,14 @@ export function Navbar() {
         </button>
 
         {/* nav desktop */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          <Link href="#features" className="hover:text-brand-800">Funcionalidades</Link>
-          <Link href="#plans" className="hover:text-brand-800">Planos</Link>
-          <Link href="#about" className="hover:text-brand-800">Sobre</Link>
-          <Link href="#contact" className="hover:text-brand-800">Contato</Link>
-        </nav>
-
-        <div className="hidden md:flex items-center gap-2">
-          <Button variant="outline" asChild><Link href="#how">Ver como funciona</Link></Button>
-          <Button className="bg-brand-800 hover:bg-brand-700" asChild><Link href="#cta">Testar gratuitamente</Link></Button>
+        <div className="hidden md:flex items-center gap-8 md:justify-between">
+          <nav className="md:flex items-center gap-8 md:gap-4 text-sm">
+            <Link href="#features" className="hover:text-primary">Funcionalidades</Link>
+            <Link href="#plans" className="hover:text-primary">Planos</Link>
+            <Link href="#about" className="hover:text-primary">Sobre</Link>
+            <Link href="#contact" className="hover:text-primary">Contato</Link>
+          </nav>
+          <Button variant="default" asChild className="flex-1"><Link href="#cta">Testar gratuitamente</Link></Button>
         </div>
       </div>
 

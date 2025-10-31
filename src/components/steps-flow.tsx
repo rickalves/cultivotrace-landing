@@ -14,7 +14,7 @@ const icons = [UserRoundPlus, Monitor, Share2]
 export function StepsFlow() {
   return (
     <section id="how" className="relative">
-      <div className="py-8 px-4 md:py-16 lg:py-20">
+      <div className="py-8 px-4 md:py-8 lg:py-20">
         <div className="text-center mb-6 md:mb-10">
           <h2 className="text-2xl text-primary md:text-3xl font-semibold">Como Funciona o CultivoTrace</h2>
           <p className="text-md md:font-medium font-medium mt-3">
@@ -23,20 +23,20 @@ export function StepsFlow() {
         </div>
 
         {/* mobile: empilhado; tablet: 3 colunas */}
-        <div className="grid gap-10 md:grid-cols-3 md:gap-6">
+        <div className="grid gap-10 md:grid-cols-3 md:gap-8 md:mx-10 lg:mx-30">
           {steps.map((s, i) => {
             const Icon = icons[i]
             return (
               <motion.div key={s.n} {...fadeUp(i)} className="relative z-10" whileHover={{ y: -6 }} whileTap={{ scale: 0.98 }}>
                 {/* conector visual: losango sempre visível; em mobile mostramos também um traço vertical ligando ao próximo card */}
-                {i < steps.length - 1 && (<div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                {i < steps.length - 1 && (<div className="absolute -bottom-2  left-1/2 -translate-x-1/2 md:translate-x-24 md:top-1/2 lg:translate-x-64 lg:top-1/2">
                   <div className="w-3 h-3 bg-accent rotate-45" />
-                    <div className="absolute left-1/2 top-5 -translate-x-1/2 md:hidden">
-                      <div className="w-px h-6 bg-accent" />
+                    <div className="absolute left-1/2 top-3 -translate-x-1/2 md:rotate-90 md:-top-2.5 md:left-6">
+                      <div className="w-px h-8  bg-accent lg:w-0.5" />
                     </div>
                 </div>)}
 
-                <Card className="pt-6 md:pt-10 border-green-200 bg-green-50/50 hover:shadow-lg transition-shadow">
+                <Card className="pt-6 border-green-200 bg-green-50/50 hover:shadow-lg transition-shadow md:pt-10 md:h-60">
                   <CardContent className="p-4 md:p-6">
                     <div className="flex flex-col items-center gap-3">
                       <div className="w-10 h-10 rounded-md bg-primary grid place-items-center text-white">
