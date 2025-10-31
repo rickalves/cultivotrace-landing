@@ -41,14 +41,14 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="plans" className="py-8 px-4 md:py-8 lg:py-20">
+    <section id="plans" className="py-8 px-4 md:py-8 lg:py-20 lg:px-30">
       <motion.div {...fadeUp(0)} className="text-center mb-6 md:mb-10">
         <h2 className=" text-primary text-2xl md:text-2xl lg:text-3xl font-semibold">Planos e Preços</h2>
         <p className="text-zinc-700 mt-2">Escolha o plano ideal para o tamanho da sua operação</p>
       </motion.div>
 
       {/* mobile: cards empilhados; tablet: 2-3 colunas (a critério) */}
-      <div className="grid gap-8 md:grid-cols-3 md:gap-4">
+      <div className="grid gap-8 md:grid-cols-3 md:gap-4 lg:gap-12">
         {plans.map((p) => (
           <motion.div key={p.name} {...fadeUp(p.i)}>
             <Card className={`relative shadow-soft ${p.highlight ? "ring-2 ring-primary" : ""} hover:-translate-y-0.5 hover:shadow-md transition`}>

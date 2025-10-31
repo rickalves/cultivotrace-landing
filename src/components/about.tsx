@@ -4,7 +4,7 @@ import { fadeUp } from "./anim"
 
 export function About() {
     return (
-        <section id="about" className="py-8 px-4 md:py-8 lg:py-20">
+        <section id="about" className="bg-zinc-50 py-8 px-4 md:py-8 lg:py-16 lg:px-30">
             {/* mobile: coluna; tablet/desktop: 2 colunas */}
             <div className="grid gap-6 md:grid-cols-2 md:gap-8 items-center md:items-start">
                 <motion.div {...fadeUp(0)}>

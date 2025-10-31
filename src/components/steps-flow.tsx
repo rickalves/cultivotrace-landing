@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "motion/react"
 import { fadeUp } from "./anim"
-import { UserRoundPlus, Monitor, Share2 } from "lucide-react"
+import { UserRoundPlus, Monitor, Share2, MoveRight} from "lucide-react"
 
 const steps = [
   { n: 1, title: "Cadastro", desc: "Cadastre propriedades, cultivos e lotes." },
@@ -23,21 +23,13 @@ export function StepsFlow() {
         </div>
 
         {/* mobile: empilhado; tablet: 3 colunas */}
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8 md:mx-10 lg:mx-30">
+        <div className="flex flex-col gap-0 items-center md:flex-row  md:mx-4 lg:mx-30">
           {steps.map((s, i) => {
             const Icon = icons[i]
             return (
-              <motion.div key={s.n} {...fadeUp(i)} className="relative z-10" whileHover={{ y: -6 }} whileTap={{ scale: 0.98 }}>
-                {/* conector visual: losango sempre visível; em mobile mostramos também um traço vertical ligando ao próximo card */}
-                {i < steps.length - 1 && (<div className="absolute -bottom-2  left-1/2 -translate-x-1/2 md:translate-x-24 md:top-1/2 lg:translate-x-64 lg:top-1/2">
-                  <div className="w-3 h-3 bg-accent rotate-45" />
-                    <div className="absolute left-1/2 top-3 -translate-x-1/2 md:rotate-90 md:-top-2.5 md:left-6">
-                      <div className="w-px h-8  bg-accent lg:w-0.5" />
-                    </div>
-                </div>)}
-
-                <Card className="pt-6 border-green-200 bg-green-50/50 hover:shadow-lg transition-shadow md:pt-10 md:h-60">
-                  <CardContent className="p-4 md:p-6">
+              <motion.div key={s.n} {...fadeUp(i)} className="flex flex-col w-full md:flex-row md:items-center" whileHover={{ y: -6 }} whileTap={{ scale: 0.98 }}>
+                <Card className="pt-8 w-full border-green-200 bg-green-50/50 hover:shadow-lg transition-shadow md:pt-10 md:h-60">
+                  <CardContent className="p-4 md:p-6 md:w-full">
                     <div className="flex flex-col items-center gap-3">
                       <div className="w-10 h-10 rounded-md bg-primary grid place-items-center text-white">
                         <Icon className="text-white w-6 h-6 md:w-8 md:h-8" />
@@ -47,6 +39,12 @@ export function StepsFlow() {
                     <p className="text-sm text-center md:text-[15px] text-zinc-700 mt-2">{s.desc}</p>
                   </CardContent>
                 </Card>
+                {/* Seta conectando os cards */}
+                {i < steps.length - 1 && (
+                  <div className="flex justify-center mb-0 h-8">
+                    <MoveRight className="h-full w-full text-accent rotate-90 md:rotate-0" />
+                  </div>
+                )}
               </motion.div>
             )
           })}

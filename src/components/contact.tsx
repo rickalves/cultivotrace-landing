@@ -18,7 +18,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-4 px-8 md:py-16 lg:py-20">
+    <section id="contact" className="py-4 px-8 md:py-16 lg:py-20 lg:px-30">
       <motion.h2 {...fadeUp(0)} className="text-2xl md:text-2xl lg:text-3xl font-semibold text-center text-primary">
         Entre em Contato
       </motion.h2>
@@ -27,7 +27,7 @@ export function Contact() {
       </motion.p>
 
       {/* mobile: formulário em cima e infos abaixo; md+: lado a lado */}
-      <div className="mt-6 grid gap-6 md:grid-cols-2 md:gap-0">
+      <div className="mt-6 grid gap-6 md:grid-cols-2 md:gap-0 md:mt-12">
         <motion.form
           {...fadeUp(0.3)}
           onSubmit={onSubmit}
