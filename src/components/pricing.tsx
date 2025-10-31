@@ -48,11 +48,11 @@ export function Pricing() {
       </motion.div>
 
       {/* mobile: cards empilhados; tablet: 2-3 colunas (a critério) */}
-      <div className="grid gap-8 md:grid-cols-3 md:gap-4 lg:gap-12">
+      <div className="grid gap-8 md:grid-cols-3 md:gap-4 lg:gap-24">
         {plans.map((p) => (
           <motion.div key={p.name} {...fadeUp(p.i)}>
             <Card className={`relative shadow-soft ${p.highlight ? "ring-2 ring-primary" : ""} hover:-translate-y-0.5 hover:shadow-md transition`}>
-              <CardContent className="p-4 md:p-4">
+              <CardContent className="p-4 md:p-4 lg:py-30 lg:px-10">
                 <div className="flex flex-col items-center justify-between">
                   <div className="text-2xl font-semibold">{p.name}</div>
                   <p className="text-center text-md">{p.desc}</p>
@@ -64,7 +64,7 @@ export function Pricing() {
                   <span className="text-zinc-600">{p.period}</span>
                 </div>
 
-                <ul className="space-y-2 text-sm md:text-[15px]">
+                <ul className="space-y-2 text-sm md:text-[15px] lg:space-y-4">
                   {p.features.map((f) => (
                     <li key={f} className="flex items-start gap-2">
                       <Check className="size-4 mt-0.5 text-brand-800" />

@@ -19,7 +19,7 @@ export function Navbar() {
 
   return (
     <motion.header {...fadeIn} className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-      <div className="h-16 flex items-center justify-between px-4 md:h-20 md:px-8 ">
+      <div className="h-16 flex items-center justify-between px-4 md:h-20 md:px-8 lg:px-30 ">
         <Link href="/" className="flex items-center gap-2 font-semibold">
           <Image src="/logo.svg" alt="Cultivo Trace Logo" width={192} height={48} />
         </Link>

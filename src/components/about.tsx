@@ -6,7 +6,7 @@ export function About() {
     return (
         <section id="about" className="bg-zinc-50 py-8 px-4 md:py-8 lg:py-16 lg:px-30">
             {/* mobile: coluna; tablet/desktop: 2 colunas */}
-            <div className="grid gap-6 md:grid-cols-2 md:gap-8 items-center md:items-start">
+            <div className="grid gap-6 md:grid-cols-2 md:gap-8 items-center md:items-start lg:gap-40">
                 <motion.div {...fadeUp(0)}>
                     <h2 className="text-2xl text-center font-semibold text-primary md:text-3xl md:text-left lg:text-3xl">Sobre o CultivoTrace</h2>
                     <p className="mt-3 text-zinc-700 text-center md:text-left">
